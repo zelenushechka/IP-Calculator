@@ -1,0 +1,14 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<h1>Find IP details</h1>
+<form action="result" method="POST">
+    {% csrf_token %}
+
+    Enter Address: <input type="text" name="ip_address"><br><br>
+    Enter Netmask: <input type="text" name="cdir"><br><br>
+    <input type="submit">
+</form>
+
+{% endblock %}
